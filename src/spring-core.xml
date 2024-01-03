@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!--<bean id="greetingService" class="com.spring.PersonGreeting">
+   &lt;!&ndash; <constructor-arg value="Welcome to Spring"/>&ndash;&gt;
+        &lt;!&ndash;<property name="greeting" value="Greeting-service-message"/>&ndash;&gt;
+    </bean>-->
+    <!--<bean id="roundTable" class="com.spring.RoundTable">
+      <constructor-arg value="Round table value"  index="0"/>
+        &lt;!&ndash;<constructor-arg ref="grail"/>&ndash;&gt;
+        <property name="quest" ref="grail"/>
+    </bean>
+    <bean id="grail" class="com.spring.HolyGrailQuest"/>
+    <bean id="p" class="com.spring.Person">
+        &lt;!&ndash;<constructor-arg value="123" />
+        <constructor-arg value="Ramesh" />&ndash;&gt;
+        <property name="id" value="123"/>
+        <property name="name" value="Ramesh"/>
+    </bean>-->
+    <bean id="orders" class="com.amazon.OrderServiceImpl">
+        <constructor-arg value="100"/>
+        <constructor-arg value="45.23"/>
+        <constructor-arg value="***"/>
+    </bean>
+
+
+</beans>
