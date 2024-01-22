@@ -1,4 +1,7 @@
+import com.amazon.Order;
+import com.amazon.OrderDao.OrderDao;
 import com.amazon.OrderService;
+import com.amazon.SubmitOrder;
 import com.spring.GreetingService;
 import com.spring.Person;
 import com.spring.QuestFailException;
@@ -10,20 +13,15 @@ import org.springframework.core.io.FileSystemResource;
 public class Main {
     public static void main(String[] args) {
         BeanFactory beanFactory=new XmlBeanFactory( new FileSystemResource("C:\\Users\\SURESH\\OneDrive\\Spring\\spring-core\\src\\spring-core.xml"));
-        /*GreetingService greetingService = (GreetingService) beanFactory.getBean("greetingService");
-        greetingService.sayGreeting();*/
-        /*RoundTable roundTable=(RoundTable) beanFactory.getBean("roundTable");
-        try {
-            roundTable.printGrail();
-        } catch (QuestFailException e) {
-            throw new RuntimeException(e);
-        }
-       *//* Person person=(Person) beanFactory.getBean("p");
+
+        /*Person person = (Person) beanFactory.getBean("person");
+        System.out.println(person.getId());
         System.out.println(person.getName());*/
-        OrderService orderService=(OrderService) beanFactory.getBean("orders");
-        orderService.availableQuantity();
-        orderService.price();
-        orderService.rating();
-        orderService.submitOrder();
+        /*SubmitOrder order=(SubmitOrder) beanFactory.getBean("submitOrder");
+        order.perform();*/
+        OrderDao orderDao=(OrderDao) beanFactory.getBean("orderDao");
+        String s = orderDao.saveOrder(new Order(123, "des1", 125, "Laptop"));
+        System.out.println(s);
+
     }
 }

@@ -4,15 +4,15 @@ public class Person {
     private int id;
     private  String name;
 
-    /*public Person(){
+    public Person(){
         System.out.println("default constructor");
-    }*/
+    }
 
-   /* public Person(int id, String name){
+   public Person(int id, String name){
         this.id=id;
         this.name=name;
         System.out.println("Person constructor");
-    }*/
+    }
     // Person p=new Person(123, "Ramesh");
     public int getId() {
         return id;
